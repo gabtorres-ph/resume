@@ -1,0 +1,40 @@
+% Step 2: add packages for margins, links, typography, and list spacing.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+
+\definecolor{accent}{HTML}{145DA0}
+\hypersetup{colorlinks=true, urlcolor=accent}
+\setlist[itemize]{itemsep=0.15em, topsep=0.25em}
+\pagestyle{empty}
+
+\begin{document}
+
+{\LARGE\bfseries Gabriel Torres}\hfill Manila, Philippines
+
+\href{mailto:gabtorresph@gmail.com}{gabtorresph@gmail.com}\hfill
+\href{https://github.com/gabtorres-ph}{github.com/gabtorres-ph}
+
+\vspace{0.5em}
+\hrule
+\vspace{0.5em}
+
+Software engineer with 7+ years of experience building scalable backend and
+data systems across geospatial, energy, and fintech domains.
+
+\section*{Experience}
+
+\textbf{Senior AWS Engineer (Contract)}\hfill 2026\\
+\textcolor{accent}{ProductFlight} --- E-Commerce, European Union
+
+\begin{itemize}
+  \item Integrated OIDC with Pulumi, AWS Cognito and Microsoft Azure Entra ID.
+  \item Improved GitHub Actions continuous-integration cache usage with Python uv.
+\end{itemize}
+
+\end{document}

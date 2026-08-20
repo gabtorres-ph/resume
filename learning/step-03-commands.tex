@@ -1,0 +1,47 @@
+% Step 3: use commands like Python helper functions to remove repetition.
+\documentclass[10pt,a4paper]{article}
+
+\usepackage[margin=0.65in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\pagestyle{empty}
+
+% #1 is role, #2 is company, #3 is date, and #4 is context/location.
+\newcommand{\experience}[4]{%
+  \vspace{0.35em}
+  \textbf{#1}\hfill #3\\
+  \textcolor{blue!60!black}{#2} --- #4
+}
+
+% #1 is the skill-category label and #2 is its comma-separated content.
+\newcommand{\skillrow}[2]{\item \textbf{#1:} #2}
+
+\begin{document}
+
+{\LARGE\bfseries Gabriel Torres}\hfill
+\href{https://github.com/gabtorres-ph}{GitHub}
+
+\section*{Experience}
+
+\experience{Senior AWS Engineer (Contract)}{ProductFlight}{2026}{European Union}
+\begin{itemize}[itemsep=0.1em]
+  \item Integrated OIDC for Single-Sign-On.
+  \item Improved CI cache usage and application observability.
+\end{itemize}
+
+\experience{Fullstack Geospatial Developer}{DataFarming}{2022--Present}{Australia}
+\begin{itemize}[itemsep=0.1em]
+  \item Built event-driven microservices and RESTful APIs with Python and AWS.
+  \item Optimized continent-scale satellite imagery processing.
+\end{itemize}
+
+\section*{Skills}
+\begin{itemize}[itemsep=0.1em]
+  \skillrow{Languages}{Python, SQL, Bash, C, JavaScript}
+  \skillrow{Cloud}{AWS, Google Cloud, DigitalOcean}
+\end{itemize}
+
+\end{document}

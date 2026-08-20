@@ -1,0 +1,65 @@
+% Packages are similar to Python dependencies: each adds a focused capability.
+\usepackage[a4paper,top=0.42in,bottom=0.42in,left=0.48in,right=0.48in]{geometry}
+\usepackage[T1]{fontenc}
+\usepackage{lmodern}
+\usepackage{microtype}
+\usepackage{xcolor}
+\usepackage{hyperref}
+\usepackage{enumitem}
+\usepackage{tabularx}
+\usepackage{array}
+\usepackage{titlesec}
+\usepackage{needspace}
+
+\definecolor{accent}{HTML}{145DA0}
+\definecolor{rulegray}{HTML}{7A7A7A}
+
+\hypersetup{
+  colorlinks=true,
+  urlcolor=accent,
+  linkcolor=accent,
+  pdfauthor={Gabriel Torres},
+  pdftitle={Gabriel Torres - Resume}
+}
+
+\pagestyle{empty}
+\setlength{\parindent}{0pt}
+\setlength{\parskip}{0pt}
+\setlength{\tabcolsep}{0pt}
+\urlstyle{same}
+
+\titleformat{\section}
+  {\large\bfseries}
+  {}{0pt}{}
+  [\vspace{-0.35em}\color{rulegray}\titlerule]
+\titlespacing*{\section}{0pt}{0.55em}{0.3em}
+
+\setlist[itemize]{
+  leftmargin=1.35em,
+  itemsep=0.03em,
+  parsep=0pt,
+  topsep=0.12em,
+  partopsep=0pt
+}
+
+% Commands are formatter functions. Their arguments are the resume's data.
+\newcommand{\resumeheader}[5]{%
+  \begin{tabularx}{\textwidth}{@{}p{0.30\textwidth}>{\centering\arraybackslash}X>{\raggedleft\arraybackslash}p{0.30\textwidth}@{}}
+    #1 & {\LARGE\bfseries #3} & #4 \\
+    #2 & \hfill & #5
+  \end{tabularx}
+}
+
+\newcommand{\experience}[4]{%
+  \Needspace{4\baselineskip}%
+  \vspace{0.35em}%
+  \begin{tabularx}{\textwidth}{@{}>{\raggedright\arraybackslash}p{0.38\textwidth}@{\hspace{0.8em}}>{\centering\arraybackslash}X@{\hspace{0.8em}}>{\raggedleft\arraybackslash}p{0.16\textwidth}@{}}
+    #1 & \textbf{#2} & #3 \\
+       & #4 &
+  \end{tabularx}%
+  \vspace{-0.2em}%
+}
+
+\newcommand{\project}[2]{\item \textbf{\textcolor{accent}{#1:}} #2}
+\newcommand{\skillrow}[2]{\item \textbf{#1:} #2}
+\newcommand{\educationitem}[2]{\item \textbf{#1}, #2}
